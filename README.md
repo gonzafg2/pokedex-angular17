@@ -1,27 +1,56 @@
-# PokedexAngular17
+# Taller: Desarrollando una Pokedex Interactiva con Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+**Mentor de esta edición:** Gonzalo Fleming G. [@gonzafg2](https://github.com/gonzafg2)
 
-## Development server
+## Descripción del Taller
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Adéntrate en el mundo de Angular creando una Pokédex interactiva. Explora a tus Pokémon favoritos de la primera generación y descubre sus detalles.
 
-## Code scaffolding
+## Objetivo del Taller
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Conocer los conceptos básicos de Angular.
+- Crear una aplicación web interactiva.
+- Aprender a utilizar Bootstrap para darle estilo a la aplicación.
+- Aprender a consumir una API REST.
+- Aprender a desplegar una aplicación en GitHub Pages.
+- Aprender a utilizar Git y GitHub para el control de versiones.
+- Aprender a utilizar Angular CLI para crear y desplegar aplicaciones.
 
-## Build
+## Prerrequisitos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Laptop con acceso a un editor de texto.
+- Conocimientos básicos de Javascript, HTML y CSS.
+- Tener instalado Node.js y npm en tu laptop.
+- Tener instalado Git en tu laptop y cuenta activa en GitHub.
+- Tener instalado Angular CLI en tu laptop.
 
-## Running unit tests
+## Material de apoyo
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Documentación oficial de Node.js: <https://nodejs.org>
+- Documentación oficial de npm: <https://www.npmjs.com>
+- Documentación oficial de Git: <https://git-scm.com>
+- Documentación oficial de GitHub: <https://github.com>
+- Documentación oficial de Angular CLI: <https://cli.angular.io>
+- Nueva documentación oficial de Angular: <https://angular.dev/>
+- Documentación oficial de Bootstrap: <https://getbootstrap.com/>
 
-## Running end-to-end tests
+## Recursos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- API REST de Pokémon: <https://pokeapi.co>
 
-## Further help
+## Instrucciones
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clona este repositorio en tu laptop.
+2. Crea un nuevo repositorio en tu cuenta de GitHub.
+3. Cambia el origen del repositorio clonado a tu nuevo repositorio.
+4. Descarga las dependencias del proyecto con `npm install`.
+5. Completa los ejercicios propuestos por el mentor.
+6. Despliega tu aplicación en GitHub Pages.
+7. Comparte tu aplicación con tus compañeros y el mentor.
+8. ¡Diviértete y disfruta del taller!
+9. No olvides dejar tu estrella en el repositorio del mentor.
+10. No olvides dejar tu estrella en este repositorio.
+
+## Licencia
+
+[MIT](https://opensource.org/licenses/MIT)
