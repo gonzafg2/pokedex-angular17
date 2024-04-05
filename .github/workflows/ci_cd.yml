@@ -25,4 +25,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/pokedex-angular-17:${{ format('{0:yyyy-MM-dd-HH}', github.event.pushed_at) }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/pokedex-angular-17:${{ format('{0:yyyy-MM-dd-HH}', github.event.repository.pushed_at) }}
