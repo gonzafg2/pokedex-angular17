@@ -9,4 +9,4 @@ RUN npm run build
 # Fase de ejecución
 FROM nginx:alpine
 COPY --from=build /app/dist/pokedex-angular-17 /usr/share/nginx/html
-COPY ./nginx-prod.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx/nginx-prod.conf /etc/nginx/conf.d/default.conf
