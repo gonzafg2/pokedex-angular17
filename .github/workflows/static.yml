@@ -31,18 +31,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
 
       - name: Install dependencies
         run: npm i
-      
+
       - name: Build Angular Project
         run: npm run build
-      
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/pokedex-angular17/browser
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          path: dist/pokedex-angular17/browser
+          artifact_name: github-pages
