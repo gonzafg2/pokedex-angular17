@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: pokedex-angular-17
-  namespace: pokedex-angular-17
+  namespace: ns-pokedex-angular-17
 spec:
   type: LoadBalancer
   selector:

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pokedex-angular-17
-  namespace: pokedex-angular-17
+  namespace: ns-pokedex-angular-17
 spec:
   replicas: 3
   selector:
