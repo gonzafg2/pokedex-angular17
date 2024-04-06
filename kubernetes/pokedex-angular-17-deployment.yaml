@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pokedex-angular-17
-        image: gonzafg2/pokedex-angular-17:v1
+        image: gonzafg2/pokedex-angular-17:lastest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
