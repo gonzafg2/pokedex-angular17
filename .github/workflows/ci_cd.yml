@@ -31,5 +31,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: "./cloudflare-worker"
+          workingDirectory: "./pokedex-angular-17-docker-hub"
           command: publish
