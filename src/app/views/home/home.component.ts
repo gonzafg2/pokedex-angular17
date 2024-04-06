@@ -42,8 +42,8 @@ export class HomeComponent {
     const pokeName = this.pokeNameSanitize(this.pokemonName);
     this.loading = true;
 
-    this.http.get<void>(this.POKEAPI_URL_BASE + pokeName).subscribe(
-      (data: any) => {
+    this.http.get<void>(this.POKEAPI_URL_BASE + pokeName).subscribe({
+      next: (data: any) => {
         this.pokemon = {
           abilities: data.abilities,
           height: data.height,
@@ -55,11 +55,11 @@ export class HomeComponent {
         };
         this.loading = false;
       },
-      (error: any) => {
-        console.log(error);
+      error: (e) => {
+        console.log(e);
         this.pokemon = null;
         this.loading = false;
-      }
-    );
+      },
+    });
   }
 }
