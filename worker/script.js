@@ -4,7 +4,7 @@ addEventListener("fetch", (event) => {
 
 async function handleRequest(request) {
   // URL de la imagen Docker
-  const dockerImageUrl = DOCKER_IMAGE_URL;
+  const dockerImageUrl = "DOCKER_IMAGE_URL";
 
   // Hacer una solicitud a la imagen Docker
   const dockerImageResponse = await fetch(dockerImageUrl);
