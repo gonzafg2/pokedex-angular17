@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CardPokeComponent } from '../../components/card-poke/card-poke.component';
 import { FailPokeComponent } from '../../components/fail-poke/fail-poke.component';
-import { HttpClient } from '@angular/common/http';
+import { PokeapiService } from '../../services/pokeapi.service';
 import { Pokemon } from '../../models/pokedex.model';
 import { LoaderComponent } from '../../components/loader/loader.component';
 
@@ -27,8 +27,9 @@ export class HomeComponent {
   public pokemon: null | Pokemon = null;
   public POKEAPI_URL_BASE: string = 'https://pokeapi.co/api/v2/pokemon/';
   public loading: boolean = true;
+  public visible: boolean = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private pokeapiService: PokeapiService) {}
 
   ngOnInit(): void {
     this.searchPokemon();
@@ -42,7 +43,7 @@ export class HomeComponent {
     const pokeName = this.pokeNameSanitize(this.pokemonName);
     this.loading = true;
 
-    this.http.get<void>(this.POKEAPI_URL_BASE + pokeName).subscribe({
+    this.pokeapiService.getPokemon(pokeName).subscribe({
       next: (data: any) => {
         this.pokemon = {
           abilities: data.abilities,
