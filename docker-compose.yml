@@ -1,0 +1,9 @@
+services:
+  pokedex-angular-17:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - .:/pokedex-angular-17
