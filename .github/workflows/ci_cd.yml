@@ -10,6 +10,8 @@ jobs:
   Build_and_Deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Set Docker image URL
+        run: echo "DOCKER_IMAGE_URL=https://hub.docker.com/r/${{ secrets.DOCKER_HUB_USERNAME }}/pokedex-angular-17:${{ github.event.repository.pushed_at }}" >> $GITHUB_ENV
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -31,4 +33,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: whoami
+          command: publish worker/script.js
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CF_WORKER_NAME: ${{ secrets.CLOUDFLARE_WORKER_NAME }}
