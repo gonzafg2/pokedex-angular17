@@ -40,6 +40,11 @@ jobs:
       
       - name: Build Angular Project
         run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist/pokedex-angular17/browser'
       
       - name: Deploy to GitHub Pages
         id: deployment
