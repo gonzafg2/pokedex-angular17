@@ -41,7 +41,7 @@ jobs:
         run: npm i
 
       - name: Build Angular Project
-        run: npm run build --base-href pokedex-angular17
+        run: npm run build -- --base-href pokedex-angular17
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
