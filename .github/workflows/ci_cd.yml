@@ -30,3 +30,10 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/pokedex-angular-17:${{ github.event.repository.pushed_at }}
+
+      - name: Deploy to cluster
+        uses: ThomasKliszowski/setup-kubectl@v1
+        with:
+          kube-config: ${{ secrets.KUBE_CONFIG_DATA }}
+          kube-version: 1.15.0
+      - run: kubectl set image --namespace pokedex-angular-17 deployment/pokedex-angular-17 pokedex-angular-17=${{ secrets.DOCKER_HUB_USERNAME }}/pokedex-angular-17:${{ github.event.repository.pushed_at }}

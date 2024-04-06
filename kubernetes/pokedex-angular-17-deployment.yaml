@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokedex-angular-17
+  namespace: pokedex-angular-17
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pokedex-angular-17
+  template:
+    metadata:
+      labels:
+        app: pokedex-angular-17
+    spec:
+      containers:
+      - name: pokedex-angular-17
+        image: gonzafg2/pokedex-angular-17:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
